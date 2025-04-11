@@ -19,8 +19,10 @@ public:
 		vector<int> result = {};
 		if (num > 1) {
 			if (num == 4) {
-				result.emplace_back(2);
-				result.emplace_back(2);
+				while (num % 2 == 0) {
+					result.emplace_back(2);
+					num /= 2;
+				}
 			} else
 				result.emplace_back(num);
 		}
