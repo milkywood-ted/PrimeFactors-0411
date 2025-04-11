@@ -33,6 +33,10 @@ public:
 					}
 				}
 			}
+			else if (num == 9) {
+				result.emplace_back(3);
+				result.emplace_back(3);
+			}
 			else
 				result.emplace_back(num);
 		}
