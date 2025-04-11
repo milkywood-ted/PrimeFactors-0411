@@ -18,15 +18,20 @@ public:
 	vector<int> of(int num) {
 		vector<int> result = {};
 		if (num > 1) {
+			int divider = 2;
 			if (num == 4) {
-				while (num % 2 == 0) {
-					result.emplace_back(2);
-					num /= 2;
+				while (num % divider == 0) {
+					result.emplace_back(divider);
+					num /= divider;
 				}
 			}
 			else if (num == 6) {
-				result.emplace_back(2);
-				result.emplace_back(3);
+				for (divider = 2; num > 1; ++divider) {
+					while (num % divider == 0) {
+						result.emplace_back(divider);
+						num /= divider;
+					}
+				}
 			}
 			else
 				result.emplace_back(num);
