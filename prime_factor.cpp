@@ -23,7 +23,12 @@ public:
 					result.emplace_back(2);
 					num /= 2;
 				}
-			} else
+			}
+			else if (num == 6) {
+				result.emplace_back(2);
+				result.emplace_back(3);
+			}
+			else
 				result.emplace_back(num);
 		}
 		return result;
