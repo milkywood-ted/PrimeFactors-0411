@@ -17,18 +17,12 @@ class PrimeFactor {
 public:
 	vector<int> of(int num) {
 		vector<int> result = {};
-		if (num > 1) {
-			int divider = 2;
-			if (num == 4|| num == 6 || num == 9 || num == 12) {
-				for (divider = 2; num > 1; ++divider) {
-					while (num % divider == 0) {
-						result.emplace_back(divider);
-						num /= divider;
-					}
-				}
+		
+		for (int divider = 2; num > 1; ++divider) {
+			while (num % divider == 0) {
+				result.emplace_back(divider);
+				num /= divider;
 			}
-			else
-				result.emplace_back(num);
 		}
 		return result;
 	}
