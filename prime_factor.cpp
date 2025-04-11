@@ -19,6 +19,8 @@ public:
 		vector<int> result = {};
 		if (num == 2)
 			result.emplace_back(2);
+		if (num == 3)
+			result.emplace_back(3);
 		return result;
 	}
 private:
