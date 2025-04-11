@@ -19,23 +19,13 @@ public:
 		vector<int> result = {};
 		if (num > 1) {
 			int divider = 2;
-			if (num == 4) {
-				while (num % divider == 0) {
-					result.emplace_back(divider);
-					num /= divider;
-				}
-			}
-			else if (num == 6) {
+			if (num == 4|| num == 6 || num == 9) {
 				for (divider = 2; num > 1; ++divider) {
 					while (num % divider == 0) {
 						result.emplace_back(divider);
 						num /= divider;
 					}
 				}
-			}
-			else if (num == 9) {
-				result.emplace_back(3);
-				result.emplace_back(3);
 			}
 			else
 				result.emplace_back(num);
